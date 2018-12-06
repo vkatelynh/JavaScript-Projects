@@ -1,0 +1,48 @@
+<!-- saved from url=(0014)about:internet -->
+<!--
+Name:		Tom Kay
+Assignment:	Sample assignment
+Date:		no due date
+Purpose:	Calculate the amount of fertilizer needed for a field
+-->
+ 
+<HTML>
+<HEAD>
+<TITLE>Canopy Size Calculator</TITLE>
+</HEAD>
+<BODY>
+<big><center><b>This page shows size of a canopy needed to cover a given area. <br>
+It also shows the number of support poles needed to hold up the canopy.</b></center></big>
+<br>
+
+<script type="text/javascript">
+/*
+Purpose of script:  Calculate the area of a canopy given the diameter of the circle.  Also 
+it will show the number of support poles needed to hold up the canopy.
+*/
+  "use strict";
+  var POLE_DISTANCE = 8;		// feet between each support pole
+  
+// Get the diameter of the canopy
+  var diameter = window.prompt("Enter the diameter of the canopy:  ", "0");
+
+// Calculate the radius of the canopy
+  var radius = diameter / 2;
+
+// Calculate the area of the canopy
+  var area = Math.ceil(Math.pow(radius, 2) * Math.PI);
+
+// Calculate the number of poles needed to hold up canopy
+// Calculate the circumference of the canopy
+  var circumference = 2 * Math.PI * radius;
+ 
+// Divide the circumference by the distance between the poles
+  var supports = Math.ceil(circumference / POLE_DISTANCE);
+
+// Write the results.
+  document.write("The canopy will cover ", area, " square feet and require ", supports, " support poles.");
+     
+  </script>
+
+  </BODY>
+</HTML>
