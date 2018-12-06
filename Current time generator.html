@@ -1,0 +1,41 @@
+<!-- saved from url=(0014)about:internet -->
+<!--
+Name:		Victoria Hogan	
+Assignment:	 Assignment 7	
+Date:		April 2, 2012
+Purpose:	Introduce students to if else if statements and further knowledge in forms and functions.
+-->
+ 
+<HTML>
+<HEAD></HEAD>
+<TITLE></TITLE>
+<script>
+function refreshTime() {
+	
+	"use strict";
+
+var day= new Date;
+//Create a variable to get the hour.
+//Report the results.
+var hour= day.getHours();
+		//Convert the hours to normal 12-hour clock. 
+		//Report the results.
+		if (hour > 12) {
+			document.calculator.newTime.value = hour - 12 + ":" + minutes + ":" + seconds + " p.m.";
+			}		
+//Create a variable to get the minutes.
+//Report the results.
+var minutes= day.getMinutes();
+//Create a variable to get the seconds.
+//Report the results.
+var seconds= day.getSeconds();
+	document.calculator.newTime.value = hour + ":" + minutes + ":" + seconds + " a.m.";
+	}
+</script>
+
+<BODY>
+<form name= calculator>
+	<input type="button" value="Update" onClick="refreshTime()">
+	</br>
+	<input type="text" name="newTime">
+</HTML>

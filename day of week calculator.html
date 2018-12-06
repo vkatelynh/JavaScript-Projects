@@ -1,0 +1,60 @@
+<!-- saved from url=(0014)about:internet -->
+<!--
+Name:		Your Name
+Assignment:	Assignment Name
+Date:		Due Date of Assignment
+Purpose:	What this page does (see assignment description)
+-->
+ 
+<HTML>
+<HEAD>
+<TITLE>Calculate which day of the week of any given date</TITLE>
+</HEAD>
+<BODY>
+
+<script type="text/javascript">
+/*
+Purpose of script:
+*/
+  "use strict";
+  function inDate() {
+s=prompt("Input date (example: 1 Jan 2000)","");
+if (s!="" && s!=null) determineDay(s);
+}
+function determineDay(parStr) {
+while (parStr.charAt(parStr.length-1)==" ") parStr=parStr.substring(0,parStr.length-1);
+while (parStr.charAt(0)==" ") parStr=parStr.substring(1,parStr.length);
+dd=parseInt(parStr,10);
+yyyy=parseInt(parStr.substring(parStr.lastIndexOf(" ")+1,parStr.length))
+mm=-1;
+if (parStr.toUpperCase().indexOf("JAN")!=-1) mm=0;
+if (parStr.toUpperCase().indexOf("FEB")!=-1) mm=1;
+if (parStr.toUpperCase().indexOf("MAR")!=-1) mm=2;
+if (parStr.toUpperCase().indexOf("APR")!=-1) mm=3;
+if (parStr.toUpperCase().indexOf("MAY")!=-1) mm=4;
+if (parStr.toUpperCase().indexOf("JUN")!=-1) mm=5;
+if (parStr.toUpperCase().indexOf("JUL")!=-1) mm=6;
+if (parStr.toUpperCase().indexOf("AUG")!=-1) mm=7;
+if (parStr.toUpperCase().indexOf("SEP")!=-1) mm=8;
+if (parStr.toUpperCase().indexOf("OCT")!=-1) mm=9;
+if (parStr.toUpperCase().indexOf("NOV")!=-1) mm=10;
+if (parStr.toUpperCase().indexOf("DEC")!=-1) mm=11;
+d=new Date();
+d.setYear(yyyy);
+d.setMonth(mm);
+d.setDate(dd);
+d.setHours(12);
+ww=d.getDay();
+if (ww==0) wDay="Sunday";
+if (ww==1) wDay="Monday";
+if (ww==2) wDay="Tuesday";
+if (ww==3) wDay="Wednesday";
+if (ww==4) wDay="Thursday";
+if (ww==5) wDay="Friday";
+if (ww==6) wDay="Saturday";
+alert (dd+"/"+(mm+1)+"/"+yyyy+" - "+wDay);
+
+  </script>
+
+  </BODY>
+</HTML>
