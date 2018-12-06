@@ -1,0 +1,49 @@
+<!-- saved from url=(0014)about:internet -->
+<!--
+Name:		Victoria Hogan	
+Assignment:	Random number generator.
+Date:		March 14, 2012
+Purpose:	Introduce students to forms and functions.
+-->
+ 
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<script>
+//Get the upper bound from the user.
+	function upperBound() {
+	var userNum= document.random.userNum.value;
+
+//Generate random value between 0 and 1.
+	var randomNum= Math.random();
+
+//Entend random number to upper bound.
+//Multiply random number by user inputted number.
+	var extendedNum= userNum * randomNum;
+
+//Round up or down. 
+	var roundNum= Math.round(extendedNum);
+
+//Report results. 
+	document.random.box.value = roundNum;
+
+	}
+		
+</script>
+
+</HEAD>
+<BODY>
+<form name="random">
+	Upper Bound:  <input type="text" name="userNum">
+	<br>
+	<input type="button" value="Print Number" onClick="upperBound()">
+	<input type="text" name="box">
+
+</form>
+<script>
+	"use strict";
+	
+</script>
+
+  </BODY>
+</HTML>
