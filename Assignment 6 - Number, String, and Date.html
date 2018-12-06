@@ -1,0 +1,78 @@
+<!-- saved from url=(0014)about:internet -->
+<!--
+Name:		Victoria Hogan	
+Assignment:	 Assignment Six - Number, Date, and String Objects
+Date:		March 23
+Purpose:	To introduce students to string, number, and date objects and their uses.
+-->
+ 
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<script>
+
+
+</script>
+
+
+<BODY>
+
+<HEAD><big><center><i> Number Object </HEAD></big></center></i>
+<script>
+//Report the maximum number value.
+	var max = document.write("The maximum value JavaScript is able to support is ", Number.MAX_VALUE, "<br>");
+	
+//Create a random number and fix it to a certain amount of digits.
+	var random = Math.random();
+	var randomFixed= random.toFixed(4);
+//Report the fixed random number.
+	document.write("The random number fixed to four digits is ", randomFixed, "<br>");	
+	
+	
+	
+	var stringObject = window.prompt("Enter a string ", "string");
+	var stringTwo = window.prompt("Enter a string ", "string");
+	document.write("<br>","The length is ", stringObject.length);
+	document.write("<br>", "The string in big lettering looks like: ", stringObject.big());
+	document.write("<br>", "The string in bold looks like: ", stringObject.bold());
+	document.write("<br>", "The string in blue looks like: ", stringObject.fontcolor("blue"));
+	document.write("<br>", "The string in italics looks like: ", stringObject.italics());
+	document.write("<br>", "The string in small lettering is ", stringObject.small());
+	document.write("<br>", "The letter at position four is ", stringObject.charAt(4));
+	document.write("<br>", "Concatonating string one and two gives you ", stringObject.concat(stringTwo));
+	document.write("<br>", "Index two of the string is ", stringObject.indexOf(2));
+	document.write("<br>", "Replacing str with Replac gives you: ",stringObject.replace("str", "Replac"));
+	document.write("<br>", "Letters 2-6 of the string are ", stringObject.substr(2,6));
+	document.write("<br>", "This is the string in all lowercase ", stringObject.toLowerCase());
+	document.write("<br>", "This is the string in all uppercase ", stringObject.toUpperCase(), "<br>");
+	
+	var today = new Date();
+	var dayOfWeek = document.write(today.getDay(), "<br>");
+	var dateOfMonth = document.write(today.getDate());
+	document.write("<br>", today.getMonth());
+	document.write("<br>", today.getFullYear());
+	document.write("<br>", today.getHours());
+	document.write("<br>", today.getMinutes());
+	document.write("<br>", today.getSeconds());
+	document.write("<br>", today.getTime());
+	
+	var settingTodayDate = new Date(); 
+	document.write("<br>","Today's set date is ", settingTodayDate.setDate(23));
+	document.write("<br>", "The set month is ",settingTodayDate.setMonth(2));
+	document.write("<br>","The set year is ", settingTodayDate.setFullYear(2012));
+	document.write("<br>","The set hour is ", settingTodayDate.setHours(12));
+	document.write("<br>","The set minutes are ", settingTodayDate.setMinutes(50));
+	
+	var parseDate = Date.parse("March 23, 2012","<br>");
+	document.write("<br>","The parse date is ", parseDate);
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+  </BODY>
+</HTML>
